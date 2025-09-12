@@ -1,0 +1,28 @@
+﻿@model IEnumerable<YourNamespace.Models.Student>
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h2>Registered Students</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Age</td>
+                <td>@student.Course</td>
+            </tr>
+        }
+    </tbody>
+</table>
