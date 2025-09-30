@@ -1,0 +1,118 @@
+﻿
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AdminLTE 4 | Register Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@4.2/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Center the register box without breaking navbar */
+        .register-box {
+            width: 400px; /* fixed width */
+            margin: 60px auto; /* top spacing + horizontal center */
+        }
+
+        .card.register-card-body {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .register-logo a {
+            text-decoration: none;
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .register-card-body p,
+        .register-card-body .social-auth-links {
+            text-align: center; /* center messages and social buttons */
+        }
+
+        .register-card-body .form-check-label a {
+            text-decoration: underline; /* keep terms link underlined */
+        }
+
+        .register-card-body .d-grid button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="hold-transition register-page bg-body-secondary">
+
+    <!-- Optional: Navbar (keep existing) -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Your navbar content -->
+        <ul class="navbar-nav">
+            
+        </ul>
+    </nav>
+
+    <div class="register-box">
+        <div class="register-logo">
+            <a href="https://adminlte.io" target="_blank"><b>Admin</b>LTE</a>
+        </div>
+
+        <div class="card register-card-body">
+            <p class="register-box-msg">Register a new membership</p>
+
+            <form asp-action="Registration" method="post">
+                <div class="input-group mb-3">
+                    <input type="uname" name="uname" class="form-control" placeholder="Full Name">
+                    <div class="input-group-text"><span class="bi bi-person"></span></div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Email">
+                    <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-8">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" required>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                I agree to the <a href="Registration">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="social-auth-links mb-3 d-grid gap-2">
+                <p>- OR -</p>
+                <a href="#" class="btn btn-primary"><i class="bi bi-facebook me-2"></i> Sign in using Facebook</a>
+                <a href="#" class="btn btn-danger"><i class="bi bi-google me-2"></i> Sign in using Google+</a>
+            </div>
+
+            <p class="mb-0 text-center">
+                <a href="login.html">I already have a membership</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- AdminLTE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@4.2/dist/js/adminlte.min.js"></script>
+
+</body>
+</html>
